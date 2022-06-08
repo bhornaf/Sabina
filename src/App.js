@@ -1,10 +1,11 @@
-// import Header from "./Header";
-import NavBar from "./components/Navbar";
+import Header from "./Header";
+import ItemListContainer from "./ItemListContainer";
 
 const App = () => { 
     return (
         <>
-            <NavBar />
+            <Header />
+            <ItemListContainer Titulo="Lista de Items" />
         </>
     )
 }
