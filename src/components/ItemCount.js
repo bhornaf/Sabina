@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Card, Button, InputGroup, FormControl } from "react-bootstrap";
 
-const ItemCount = (props) => {
-    const [count, setCount] = useState(parseInt(props.initial));
+const ItemCount = ({stock, initial, onAdd}) => {
+    const [count, setCount] = useState(parseInt(initial));
 
     const IncrementCount = () => {
-        if (count < props.stock) {
+        if (count < stock) {
             setCount(count + 1);
         }
     }
 
     const DecrementCount = () => {
-        if (count > props.initial) {
+        if (count > initial) {
             setCount(count - 1);
         }
 
