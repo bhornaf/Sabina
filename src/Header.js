@@ -1,9 +1,9 @@
-import Navbar from "./components/Navbar";
+import NavBar from "./components/Navbar";
 
 const Header = () => { 
   return (
     <header className="header">
-      <Navbar/>      
+      <NavBar/>      
     </header>
     // <div className="header">
     //   <h1>

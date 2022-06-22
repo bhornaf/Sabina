@@ -1,15 +1,13 @@
+import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
-import ItemListContainer from "./ItemListContainer";
-import ItemDetailContainer from "./ItemDetailContainer";
+import Main from "./Main";
 
-const App = () => { 
-
+const App = () => {
     return (
-        <>
+        <BrowserRouter>
             <Header />
-            {/* <ItemListContainer Titulo="Lista de Items" /> */}
-            <ItemDetailContainer />
-        </>
-    )
-}
+            <Main />
+        </BrowserRouter>
+    );
+};
 export default App;

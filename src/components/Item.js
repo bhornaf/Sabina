@@ -1,27 +1,26 @@
-import { Card, Button, InputGroup, Image } from "react-bootstrap";
-const Item  = ({id, title, price, pictureUrl}) => {
+import { Link } from "react-router-dom";
+import { Card, Button, Image } from "react-bootstrap";
+const Item = ({ item }) => {
     return (
         <>
-            <Card className="text-center" style={{ width: '18rem' }}>
-                <Card.Header>{title}</Card.Header>
+            <Card className="text-center" style={{ width: "18rem" }}>
+                <Card.Header>{item.title}</Card.Header>
                 <Card.Body>
-                    <Image src={pictureUrl} alt={title} fluid /> 
+                    <Image src={item.image} alt={item.title} fluid />
                     <Card.Text>
-                        <InputGroup className="mb-3"> 
-                            {/* <Button variant="primary" onClick={IncrementCount}>+</Button>
-                            <FormControl className="text-center" aria-label="Text input with dropdown button" value={count} /> 
-                            <Button variant="danger" onClick={DecrementCount}>-</Button> */}
-                        </InputGroup>
-                    <div className="text-center">
-                        <Button variant="outline-primary" >Ver detalle del producto</Button>
-                    </div>
+                        <div className="text-center">
+                            <Button variant="outline-primary">
+                                <Link to={`/Item/${item.id}`}>
+                                    Ver detalle del producto
+                                </Link>
+                            </Button>
+                        </div>
                     </Card.Text>
                 </Card.Body>
-                <Card.Footer>
-                    Stock disponible: 17
-                </Card.Footer>
+                {/* <Card.Footer>Stock disponible: 17</Card.Footer> */}
+                {/* <Link to={`/Item/${item.id}`}>Ver detalle del producto</Link> */}
             </Card>
         </>
     );
-}
+};
 export default Item;
