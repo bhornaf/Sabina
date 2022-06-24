@@ -13,10 +13,11 @@ const NavBar = () => {
                     className="justify-content-end"
                 >
                     <Nav>
+                        <Link to="/car">Carrito</Link>
                         <Link to="/">Inicio</Link>
-                        <Link to="/category/clothes">Ropa</Link>
+                        <Link to="/category/men's clothing">Ropa</Link>
                         <Link to="/category/jewelery">Joyas</Link>
-                        <Link to="/category/clothing">Electronica</Link>
+                        <Link to="/category/electronics">Electronica</Link>
                         <Link to="">Login</Link>
                         <CartWidget Cantidad="4" />
                     </Nav>
