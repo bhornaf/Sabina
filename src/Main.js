@@ -10,7 +10,7 @@ const Main = () => {
             <Routes>
                 <Route path="/" element={<ItemListContainer />} />
                 <Route
-                    path="/category/:categoryId"
+                    path="/category/:category"
                     element={<ItemListContainer />}
                 />
                 <Route path="/Item/:id" element={<ItemDetailContainer />} />

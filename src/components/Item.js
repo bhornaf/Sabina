@@ -8,17 +8,13 @@ const Item = ({ item }) => {
                 <Card.Body>
                     <Image src={item.image} alt={item.title} fluid />
                     <Card.Text>
-                        <div className="text-center">
-                            <Button variant="outline-primary">
-                                <Link to={`/Item/${item.id}`}>
-                                    Ver detalle del producto
-                                </Link>
-                            </Button>
-                        </div>
+                        <Button variant="outline-primary">
+                            <Link to={`/Item/${item.id}`}>
+                                Ver detalle del producto
+                            </Link>
+                        </Button>
                     </Card.Text>
                 </Card.Body>
-                {/* <Card.Footer>Stock disponible: 17</Card.Footer> */}
-                {/* <Link to={`/Item/${item.id}`}>Ver detalle del producto</Link> */}
             </Card>
         </>
     );
