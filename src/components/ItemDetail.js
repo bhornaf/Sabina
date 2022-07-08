@@ -7,12 +7,7 @@ import { context } from "../CartContext";
 const ItemDetail = ({ item }) => {
     const [count, setCount] = useState([]);
     const result = useContext(context);
-
-    console.log(result);
-
     const onAdd = (count) => {
-        console.log(result);
-
         result.addItem(item, count);
         setCount(count);
     };

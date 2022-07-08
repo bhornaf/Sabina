@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
 
         consulta
             .then((result) => {
-                const items = result.data();
+                const items = { id, ...result.data() };
                 setLoading(false);
                 setItems(items);
             })

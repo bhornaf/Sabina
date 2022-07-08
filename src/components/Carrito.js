@@ -50,6 +50,9 @@ const Carrito = () => {
                             >
                                 Vaciar carrito
                             </button>
+                            <Link to="/Checkout" className="btn btn-success">
+                                Pagar
+                            </Link>
                         </div>
                     </>
                 ) : (
